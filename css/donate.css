@@ -1,0 +1,604 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Rokkitt);
+/** RESET **/
+html, body {-webkit-text-size-adjust: 100%;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+div, section, h1, h2, h3, h4, h5, h6, p, ul, li, section, footer, input, select, textarea { 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/** FORM RESET **/
+form {
+    margin: 0;
+}
+
+button, input, select, textarea {
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline;
+    *vertical-align: middle;
+}
+
+button,
+input {
+    line-height: normal;
+}
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+    *overflow: visible;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+    *height: 13px;
+    *width: 13px;
+}
+
+
+/** COMMON
+========================================================****/
+/** Change background color/image and body font here **/
+
+body {
+	background: url(../images/bg_grey.jpg) #efefef;
+	color: #231f2d;
+	font: 500 1em/1.5em Helvetica, arial, sans-serif; /* 16px/24px */
+}
+
+img {
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+
+/** LAYOUT
+========================================================****/
+
+.wrapper, footer {
+	max-width: 848px;
+	width: 96%;
+	margin: 0 auto;
+}
+
+#block {
+	margin-bottom: 3em;
+	padding: 2em 5.2083%;
+	background: #fff;
+	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.left {	float: left; }
+.right { float: right; }
+
+
+/** TYPOGRAPHY
+========================================================****/
+/** Change headline, link colors/font here **/
+
+h2,h3,h4,h5 {
+	color: #492f92;
+	font-weight: 700;
+}
+
+h1 {
+	margin-bottom: 0.933em;
+	color: #492f92;
+	font-family: 'Rokkitt', serif;
+	font-size: 1.875em; /* 30px */
+	line-height: 1em;
+}
+
+h2 {
+	font-size: 1.5em; /* 24px */
+}
+
+h3 {
+	font-size: 1.125em; /* 18px */
+}
+
+h2, h3, h4, p, #content ul {
+	margin-bottom: 24px;
+}
+
+a {
+	color: #629080;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #64b89b;
+}
+
+.ctr {
+	text-align: center;
+}
+
+
+/** HEADER
+========================================================****/
+
+.logo {
+	margin: 1.5em 0;
+}
+
+header p {
+	width: 52.240566%;
+}
+
+.call {
+	font-size: 0.875em;
+}
+
+header .content img {
+	float: right;
+	margin: 0 0 2em 10px;
+	border: 8px solid #fff;
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+
+/** AMOUNT
+========================================================****/
+
+.amount {
+	position: relative;
+	margin-bottom: 5em;
+}
+
+.amount li {
+	float: left;
+	width: 12.31553819%;
+	margin-right: 5.2083%;
+	padding: 30px 0;
+	border-radius: 12px;
+	color: #fff;
+	font-family: 'Open Sans Condensed';
+	font-size: 1.5em; /* 24px */
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: center;
+	cursor: pointer;
+
+	/* Background of Amount Buttons */
+	background: #492f92;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#8270b4), to(#492f92));
+	background: -webkit-linear-gradient(top, #8270b4, #492f92);
+	background: -moz-linear-gradient(top, #8270b4, #492f92);
+	background: -ms-linear-gradient(top, #8270b4, #492f92);
+	background: -o-linear-gradient(top, #8270b4, #492f92);
+}
+
+.amount li.other {
+	margin-right: 0;
+}
+
+.amount li:hover, .amount li.active {
+	background: #ee3e41;
+	color: #fff;
+}
+
+.other-field {
+	display: none;
+	float: left;
+	clear: left;
+	margin-top: 1em;
+	padding: 10px 20px;
+	background: #fff;
+}
+
+.other-field label {
+	margin-bottom: 0.1em;
+	padding-left: 24px;
+}
+
+.other-field span {
+	float: left;
+	padding-right: 10px;
+	font-family: 'Open Sans Condensed';
+	font-size: 2em; /* 24px */
+	font-weight: 700;	
+	line-height: 38px;
+}
+
+.other-field input[type="text"] {
+	position: relative;
+	z-index: 99;
+	float: left;
+	width: 88%;
+}
+
+
+/** FORM
+========================================================****/
+
+/** Change radio/checkbox background color/gradient here **/
+.freq .radio-btn,
+.billing .checkbox {
+	background: #f1eff7;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(##f1eff7));
+	background: -webkit-linear-gradient(top, #fff, #f1eff7);
+	background: -moz-linear-gradient(top, #fff, #f1eff7);
+	background: -ms-linear-gradient(top, #fff, #f1eff7);
+	background: -o-linear-gradient(top, #fff, #f1eff7);
+}
+
+
+.req {
+	color: #ee3e41;
+}
+
+label {
+	display: block;
+}
+
+input[type="text"], input[type="email"], select, textarea {
+	width: 100%;
+	padding: 8px 10px;
+	border: 1px solid #b7b7b7;
+	border-radius: 5px;
+	font-size: 16px;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, select:focus, textarea:focus {
+	border-color: #629080;
+}
+
+select {
+	height:36px;
+	padding: 7px 10px;
+}
+
+textarea {
+	height: 160px;
+}
+
+.checkbox input, .radio-btn input {
+	width: 16px;
+	height: 16px;
+}
+
+.form-set {
+	margin-bottom: 4em;
+}
+
+.send-by, .notif, .send-email {
+	display: none;
+	margin-bottom: 0;
+}
+
+.billing, .payment {
+	margin-bottom: 0;
+}
+
+.col {
+	float: left;
+	width: 48%;
+	margin: 0 4% 4em 0;
+}
+
+.two-col .form-item {
+	float: left;
+	width: 48%;
+	margin: 0 4% 1em 0;
+}
+
+.two-col .even {
+	margin-right: 0;
+}
+
+.col.right {
+	margin-right: 0;
+}
+
+
+/** Freq ==================**/
+
+.freq .radio-btn {
+	padding: 0.5em 16px;
+	border: 1px solid #ccc;
+}
+
+.freq label {
+	cursor: pointer;
+}
+
+.freq span, label span {
+	font-size: 0.75em;
+}
+
+.freq .odd {
+	border-bottom: none;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.freq .even {
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+
+/** Designation	 ==================**/
+
+.desig label {
+	margin-bottom: 0.5em;
+}
+
+
+/** Tribute ==================**/
+
+.tribute {
+	margin-bottom: 1em;
+}
+
+.tribute h3 {
+	margin-bottom: 16px;
+}
+
+.tribute, .send-by {
+	clear: left;
+}
+
+.tribute .form-item {
+	float: left;
+}
+
+.tribute .send-email {
+	clear: left;
+	width: 100%;
+	padding-top: 1em;
+}
+
+.tribute .checkbox {
+	margin-right: 1em;
+	line-height: 2.4em;
+}
+
+.tribute .checkbox input {
+	margin-right: 0.5em;
+}
+
+.tribute .honor {
+	margin-right: 1em;
+}
+
+.send-by {
+	padding-top: 1em;
+}
+
+.send-by label {
+	float: left;
+	margin-right: 1em;	
+}
+
+.send-by .radio-btn {
+	margin-right: 1em;
+}
+
+.send-email label {
+	float: none;
+}
+
+.send-email input[type="email"] {
+	max-width: 300px;
+	margin-bottom: 1em;
+}
+
+/** Billing ==================**/
+
+.billing .checkbox {
+	padding: 0 16px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	line-height: 2.1em;
+}
+
+/** Payment ==================**/
+
+.payment h2 img {
+	height: 30px;
+	margin-left: 10px;
+}
+
+.expire select, .expire span {
+	float: left;
+}
+
+.expire select {
+	width: 46%;
+}
+
+.expire span {
+	padding: 0 10px;
+	font-size: 2em;
+	line-height: 1.4em;
+}
+
+.csc input {
+	max-width: 200px;
+}
+
+.form-btn {
+	text-align: center;
+	margin-bottom: 2em;	
+}
+
+button {
+	padding: 20px 50px;
+	border: none;
+	border-radius: 12px;
+	color: #fff;
+	font-family: 'Open Sans Condensed';
+	font-size: 3em;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: center;
+	
+	/** Button Background **/
+	background: #492f92;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#8270b4), to(#492f92));
+	background: -webkit-linear-gradient(top, #8270b4, #492f92);
+	background: -moz-linear-gradient(top, #8270b4, #492f92);
+	background: -ms-linear-gradient(top, #8270b4, #492f92);
+	background: -o-linear-gradient(top, #8270b4, #492f92);
+}
+
+button:hover {
+	background: #492f92;
+	color: #fff;
+}
+
+.review {
+	font-size: 0.75em;
+	padding: 0 5.2083%;
+}
+
+.security {
+	position: fixed;
+	top: 40px;
+	right: 10px;	
+}
+
+.security div {
+	margin-bottom: 1em;
+	text-align: center;
+}
+
+
+/** FOOTER
+========================================================****/
+
+
+footer {
+	margin-top: 2em;
+	padding: 2em 0;
+	background: url(../images/shadow.png) no-repeat center top;
+	background-size: 100%;
+}
+
+footer p {
+	margin-bottom: 0.5em;
+	color: #636363;
+	font-size: 0.667em;
+}
+
+footer li {
+	float: left;
+	padding-left: 15px;
+}
+
+footer ul {
+	float: right;
+	margin-bottom: 0.5em;
+}
+
+footer .social a {
+	color: #492e91;
+	font-size: 2em;
+}
+
+footer .follow {
+	font-family: 'Rokkitt', serif;
+	color: #492e91;
+	font-size: 1.625em;
+	line-height: 0.875em;
+}
+
+footer .fgc {
+	float: right;
+	clear: right;
+	display: block;
+	width: 144px;
+	height: 58px;
+	background: url(../images/sprite.png) no-repeat 0 -349px;
+	text-indent: -9999em;
+}
+
+footer .add {
+	clear: left;
+	min-width: 140px;
+}
+
+
+/** MEDIA QUERIES
+========================================================****/
+
+@media all and (max-width: 900px) {
+	.expire select { width: 44%; }
+	.security { position: static; margin-bottom: 2em; text-align: center; }
+	.security div { display: inline-block; padding: 0 10px; }
+}
+
+@media all and (max-width: 730px) {
+	.amount li { width: 14.8%; margin-right: 2.2083%; }
+	.tribute .honor { clear: left; margin-top: 1em; }
+	.tribute .honoree { margin-top: 1em; }
+	footer { padding-top: 1.5em; }
+	footer .left, footer .right { float: none; text-align: center; width: 100%; margin-bottom: 1em; }
+	footer ul { float: none; }
+	footer .follow { display: block; width: 100%; padding: 0; margin-bottom: 0.5em; }
+	footer li { float: none; display: inline; padding: 0 10px; }
+	footer .fgc { float: none; margin: 0 auto; }
+	footer .add { width: 146px; margin: 1em auto; }
+}
+
+@media all and (max-width: 640px) {
+	header { padding: 0 5.2083%; }
+	header .content img { display: none; }
+	header p { width: 100%; }
+	.checkbox input, .radio-btn input { width: 20px; height: 20px; }
+	.amount li { width: 31.33333%; margin: 0 2% 1em 0; }
+	.break { clear: left; }
+	.col, .two-col .form-item { float: none; width: 100%; margin: 0 0 1em; }
+	.amount, .col { margin-bottom: 2em; }
+	.other-field { width: 98%; margin-top: 0; }
+	.tribute .honor { clear: left; margin-bottom: 1em; }
+
+}
+
+@media all and (max-width: 540px) {
+	#content { padding: 2em 7.62819% 1em; }
+	button { font-size: 2em; }
+	h1 { font-size: 1.75em; }
+	h2 { font-size: 1.25em; }
+	label { font-size: 0.875em; }
+	.desig { margin-bottom: 0; }
+	.char, .tribute, .desig label { display: none; }
+	.payment h2 img { margin: 1em 0 0 0; }
+}
+
+@media all and (max-width: 320px) {
+	button { font-size: 1.5em; }
+}
